@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react';
 import { User } from '../model/User';
-import { UserInfo } from './UserInfo';
+import { UserInfo } from '../components/UserInfo';
 
 function LoginPage() {
 
@@ -22,7 +22,7 @@ function LoginPage() {
                 }
             )
         }).then(response => {console.log(response); return response.json()})
-        .then(json => setUser(json as User));
+        .then( json => {console.log(json); setUser(json as User)});
     }
 
     function setUsernameInput(event:SyntheticEvent){

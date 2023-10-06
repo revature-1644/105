@@ -1,11 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Navbar(){
     return (
         <>
-        <a href = "website.com">sample link 1</a>
-        <a href = "website.com">sample link 2</a>
-        <a href = "website.com">sample link 3</a>
+        <Link to="/Home">Home page</Link>
+        <Link to="/Login">Login page</Link>
         </>
     )
-}
+} 
